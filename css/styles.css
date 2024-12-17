@@ -1,7 +1,7 @@
 /* navigation bar info*/
 nav
   {
-    background-color:#242551;
+    background-color:#36454F;
   }
 
   nav ul
@@ -14,7 +14,8 @@ nav
   nav li
   {
     display:inline-block;
-    font-size: 2em;
+    width: 25%;
+    font-size: 4vw;
     font-family:sans-serif;
     font-weight: bold;
     border-top-style: none;
@@ -38,18 +39,19 @@ nav
   #headers h1
   {
     font-family: sans-serif;
-    font-size: 10em;
-    padding: 0%;
-    margin-top: -10px;
+    width: 100%;
+    font-size: 19vw;
+    margin-top: -3%;
+    color: #36454F;
   }
 
   #headers h3
   {
     font-family: sans-serif;
-    font-size: 5em;
-    padding: 0%;
-    margin-top: -150px;
-    margin-bottom: -10px;
+    width: 100%;
+    font-size: 10vw;
+    margin-top: -15%;
+    color: #36454F;
   }
 
   /* footer info */
@@ -57,7 +59,7 @@ nav
   {
     text-align: left;
     font-size: 1em;
-    background-color:#242551;
+    background-color:#36454F;
     color:#f6eee4;
     padding-top:0%;
     padding-bottom:1%;
@@ -66,27 +68,35 @@ nav
   }
 
   /* body into */
-  .column 
-  {
-    float: left;
-    width: 50%;
-    word-wrap:break-word;
-  }
-  
-  .row:after 
-  {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  .row2:after 
-  {
-    content: "";
-    display: table;
-    clear: both;
+
+  .gallery{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 30px;
   }
 
-  .row img{
+  .gallery img{
+    width: 100%;
+  }
+  
+  figure
+  {
+    border: 4px solid #406244;
+    box-shadow: 6px 6px 10px #242551;
+  }
+
+  figcaption
+  {
+    padding: 2%;
+    border-top: 4px solid #2a1f14;
+  }
+  .row, .row2, .row3
+  {
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .row img,.row3 img{
     width: 100%;
   }
 
@@ -94,13 +104,42 @@ nav
   {
     background-color: #c94d4d;
   }
+
   .row2
   {
     background-color: #d8832b;
+  }
+
+  .row3
+  {
+    background-color: #dab71f;
   }
 
   body
   {
     font-size: 20px;
     font-family: sans-serif;
+  }
+
+/* Tablet*/
+  @media (max-width: 600px){
+
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      grid-gap: 30px;
+  }
+  }
+  
+  
+  /*mobile*/
+  @media (max-width: 500px){
+    .row,.row2,.row3{
+      grid-template-columns: 1fr;
+    }
+    
+    .gallery{
+      grid-template-columns:1fr;
+      grid-gap: 30px;
+  }
   }
