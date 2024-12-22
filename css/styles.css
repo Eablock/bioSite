@@ -171,7 +171,7 @@ nav
 }
 
 /* Tablet*/
-  @media (min-width: 600px) and (max-width:999){
+  @media (min-width: 600px) and (max-width:999px){
 
     .gallery{
       display:grid;
